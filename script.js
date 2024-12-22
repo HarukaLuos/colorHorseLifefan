@@ -14,7 +14,9 @@ function getParentColors() {
     let found = false;
 
     for (let parents in colorData) {
-        if (colorData[parents].map(c => c.toLowerCase()).includes(colorName)) {
+        // Приводим дочерние цвета и введенный цвет к нижнему регистру для сравнения
+        const childColors = colorData[parents].map(color => color.toLowerCase());
+        if (childColors.includes(colorName)) {
             if (!found) {
                 resultHTML += '<h3>Родительские цвета для ' + colorName + ':</h3><ul>';
                 found = true;
