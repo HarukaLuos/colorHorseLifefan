@@ -1,10 +1,7 @@
 const colorData = [
     { parents: "cipheris + cipheris", children: ["cipheris", "mocca", "slate", "shadow", "prune"] },
     { parents: "cipheris + raisin", children: ["cipheris", "blackberry", "raisin", "depth", "gunmetal", "seal", "mauve"] },
-    { parents: "red + blue", children: ["purple", "violet", "lavender"] },
-    { parents: "cipheris + ash", children: ["cipheris", "blackberry", "raisin", "depth", "gunmetal", "seal", "mauve"] },
-    { parents: "cipheris + vf", children: ["cipheris", "blackberry", "raisin", "depth", "gunmetal", "seal", "mauve"] },
-    { parents: "cipheris + eggplant", children: ["cipheris", "blackberry", "raisin", "depth", "wool", "seal", "eggplant"] }
+    { parents: "cipheris + eggplant", children: ["cipheris", "blackberry", "raisin", "depth", "wool", "seal", "eggplant"] },
 ];
 
 function formatString(str) {
