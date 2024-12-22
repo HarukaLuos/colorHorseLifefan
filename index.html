@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цветовые комбинации</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Цветовые комбинации</h1>
+        <div class="input-group">
+            <label for="colorName">Введите название цвета:</label>
+            <input type="text" id="colorName" name="colorName">
+            <button onclick="getParentColors()">Показать родительские цвета</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const colorData = {
+            "фиолетовый": ["красный", "синий"],
+            "зеленый": ["синий", "желтый"],
+            "оранжевый": ["красный", "желтый"]
+        };
+
+        function getParentColors() {
+            const colorName = document.getElementById('colorName').value.toLowerCase();
+            const resultDiv = document.getElementById('result');
+            if (colorData[colorName]) {
+                let resultHTML = '<h3>Родительские цвета для ' + colorName + ':</h3><ul>';
+                colorData[colorName].forEach(parent => {
+                    resultHTML += '<li>' + parent + '</li>';
+                });
+                resultHTML += '</ul>';
+                resultDiv.innerHTML = resultHTML;
+            } else {
+                resultDiv.innerHTML = '<p>Нет данных о родительских цветах для ' + colorName + '</p>';
+            }
+        }
+    </script>
+</body>
+</html>
