@@ -1,6 +1,7 @@
 const colorData = {
     "cipheris + cipheris": ["cipheris", "mocca", "slate", "shadow", "prune"],
     "cipheris + raisin": ["cipheris", "blackberry", "raisin", "depth", "gunmetal", "seal", "mauve"]
+     "cipheris + eggplant": ["cipheris", "blackberry", "raisin", "depth", "wool", "seal", "eggplant"]
 };
 
 function formatString(str) {
