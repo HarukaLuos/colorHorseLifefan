@@ -4,7 +4,11 @@ const colorData = [
     { parents: "cipheris + eggplant", children: ["cipheris", "blackberry", "raisin", "depth", "wool", "seal", "eggplant"] },
     { parents: "cipheris + blackberry", children: ["cipheris", "blackberry", "gunmetal", "depth", "mauve"] },
 { parents: "cipheris + elderberry", children: ["cipheris", "elderberry", "wool", "raisin", "seal", "ore", "eggplant"] },
-{ parents: "cipheris + seal", children: ["cipheris", "blackberry", "gunmetal", "pond", "bark", "seal", "charcoal"] }
+{ parents: "cipheris + seal", children: ["cipheris", "blackberry", "gunmetal", "pond", "bark", "seal", "charcoal"] },
+    { parents: "cipheris + prune", children: ["cipheris", "prune", "slate", "dusk", "shadow"] },
+{ parents: "cipheris + heather", children: ["cipheris", "smoke", "gravel", "periwinkle", "bird", "ash", "cipheris", " heather"] },
+{ parents: "cipheris + nimbus", children: ["cipheris", "stone", "smoke", "puddle", "gravel", "nimbus", "periwinkle"] },
+{ parents: "cipheris + nimbus", children: ["cipheris", "stone", "porpoise", "puddle", "gravel", "lavender", "eclipse"] },
 
 ];
 
