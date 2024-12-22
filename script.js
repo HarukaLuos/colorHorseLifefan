@@ -8,7 +8,7 @@ const colorData = [
     { parents: "cipheris + prune", children: ["cipheris", "prune", "slate", "dusk", "shadow"] },
 { parents: "cipheris + heather", children: ["cipheris", "smoke", "gravel", "periwinkle", "bird", "ash", "cipheris", " heather"] },
 { parents: "cipheris + nimbus", children: ["cipheris", "stone", "smoke", "puddle", "gravel", "nimbus", "periwinkle"] },
-{ parents: "cipheris + nimbus", children: ["cipheris", "stone", "porpoise", "puddle", "gravel", "lavender", "eclipse"] },
+{ parents: "cipheris + eclipse", children: ["cipheris", "stone", "porpoise", "puddle", "gravel", "lavender", "eclipse"] },
 
 ];
 
