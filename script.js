@@ -1,9 +1,10 @@
 const colorData = {
     "cipheris + cipheris": ["cipheris", "mocca", "slate", "shadow", "prune"],
-    "cipheris + raisin": ["cipheris", "blackberry", "raisin", "depth", "gunmetal", "seal", "mauve"]
-    "cipheris + eggplant": ["cipheris", "blackberry", "raisin", "depth", "wool", "seal", "eggplant"]
+    "cipheris + raisin": ["cipheris", "blackberry", "raisin", "depth", "gunmetal", "seal", "mauve"],
+    "новый_цвет_1 + новый_цвет_2": ["дочерний_цвет_1", "дочерний_цвет_2", "дочерний_цвет_3"],
+    "example + example": ["example1", "example2", "example3"],
+    "red + blue": ["purple", "violet", "lavender"]  // Новая строка
 };
-
 function formatString(str) {
     return str.trim().toLowerCase();
 }
