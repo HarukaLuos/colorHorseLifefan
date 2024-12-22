@@ -10,14 +10,12 @@ function formatString(str) {
 
 function getParentColors() {
     const colorName = formatString(document.getElementById('colorName').value);
-    console.log("Введенное название цвета:", colorName);
     const resultDiv = document.getElementById('result');
     let resultHTML = '';
     let found = false;
 
     for (let parents in colorData) {
         const childColors = colorData[parents].map(color => color.toLowerCase());
-        console.log("Проверка родительских цветов:", parents, childColors);
         if (childColors.includes(colorName)) {
             if (!found) {
                 resultHTML += '<h3>Родительские цвета для ' + colorName + ':</h3><ul>';
