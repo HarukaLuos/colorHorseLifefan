@@ -54,11 +54,17 @@
     <script>
         const colorData = {
             "бордовый": ["фиолетовый + красный", "синий + клубничный"],
-            "сиреневый": ["фиолетовый + красный", "синий + клубничный"]
+            "сиреневый": ["фиолетовый + красный", "синий + клубничный"],
+            "оранжевый": ["красный + желтый"],
+            "зеленый": ["синий + желтый"]
         };
 
+        function formatString(str) {
+            return str.trim().toLowerCase();
+        }
+
         function getParentColors() {
-            const colorName = document.getElementById('colorName').value.toLowerCase();
+            const colorName = formatString(document.getElementById('colorName').value);
             const resultDiv = document.getElementById('result');
             if (colorData[colorName]) {
                 let resultHTML = '<h3>Родительские цвета для ' + colorName + ':</h3><ul>';
