@@ -53,10 +53,12 @@
 
     <script>
         const colorData = {
-            "бордовый": ["фиолетовый + красный", "синий + клубничный"],
-            "сиреневый": ["фиолетовый + красный", "синий + клубничный"],
-            "оранжевый": ["красный + желтый"],
-            "зеленый": ["синий + желтый"]
+            "фиолетовый + красный": "бордовый" "сиреневый",
+            "синий + клубничный": "бордовый",
+            "фиолетовый + красный": "сиреневый",
+            "синий + клубничный": "сиреневый",
+            "красный + желтый": "оранжевый",
+            "синий + желтый": "зеленый"
         };
 
         function formatString(str) {
@@ -66,11 +68,20 @@
         function getParentColors() {
             const colorName = formatString(document.getElementById('colorName').value);
             const resultDiv = document.getElementById('result');
-            if (colorData[colorName]) {
-                let resultHTML = '<h3>Родительские цвета для ' + colorName + ':</h3><ul>';
-                colorData[colorName].forEach(parent => {
-                    resultHTML += '<li>' + parent + '</li>';
-                });
+            let resultHTML = '';
+            let found = false;
+
+            for (let parents in colorData) {
+                if (colorData[parents].toLowerCase() === colorName) {
+                    if (!found) {
+                        resultHTML += '<h3>Родительские цвета для ' + colorName + ':</h3><ul>';
+                        found = true;
+                    }
+                    resultHTML += '<li>' + parents + '</li>';
+                }
+            }
+
+            if (found) {
                 resultHTML += '</ul>';
                 resultDiv.innerHTML = resultHTML;
             } else {
